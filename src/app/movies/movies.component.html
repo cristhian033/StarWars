@@ -2,7 +2,7 @@
   <div fxLayout="row wrap"  fxLayoutAlign="center center" stretch>
     <div fxFlex="25" fxLayout="column" *ngFor="let movie of movies.results"
       style="padding: 5px;">
-      <a href='movies/{{movie.episode_id}}'><img mat-card-image src='../../assets/images/{{movie.episode_id}}.jpg' title='{{movie.title}}'></a>
+      <a href="/movies/{{movie.url.split('/')[5]}}?"><img mat-card-image src='../../assets/images/{{movie.episode_id}}.jpg' title='{{movie.title}}'></a>
     </div>
   </div>
 </div>

@@ -1,1 +1,17 @@
-<p>movie-detail works!</p>
+<div *ngIf="movie">
+    <audio controls autoplay>
+        <source src="../../assets/music/soundtrack.mp3" type="audio/mp3" >
+        Your browser does not support the audio element.
+      </audio> 
+  <h1>STAR WARS</h1>
+  <div id="titles">
+    <div id="titlecontent">
+      <p class="center">EPISODE {{movie.episode_id}}<br>{{movie.title}}</p>
+      <p>{{movie.opening_crawl}}</p>
+      <br><br><br><br>
+      <p>Producer: {{movie.producer}} </p>
+      <p>Director: {{movie.director}} </p>
+      <p>Release Date: {{movie.release_date}} </p>
+    </div>
+  </div>
+</div>
