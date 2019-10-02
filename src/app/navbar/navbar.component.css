@@ -35,6 +35,9 @@ footer{
   color: white;
   
 }
+mat-sidenav-content{
+  background-image: url('../../assets/images/fondo.png');
+}
 
 mat-sidenav{
   background-color:#1B191A !important;
