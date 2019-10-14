@@ -4,9 +4,15 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-nav-list class='submenu'>
-      <a mat-list-item href="/movies"><img src='./../../assets/images/pelicula.png'></a>
+      <a  href="/"><img src='./../../assets/images/home.png' title="Index"></a>
+        <br><br><br><br>
+      <a href="/movies"><img src='./../../assets/images/movies.png' title="Movies"></a>
       <br><br><br><br>
-      <a mat-list-item href="#"><img src='./../../assets/images/gracias.png'></a>
+      <a  href="/people"><img src='./../../assets/images/people.png' title='People'></a>
+      <br><br><br><br>
+      <a href="/species"><img src='./../../assets/images/species.png' title="Species"> </a>
+      <br><br><br><br>
+      <a href="/planets"><img src='./../../assets/images/planets.png' title="Planets"> </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -14,4 +20,4 @@
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-<footer></footer>
+<div *ngIf="router.url !== '/'"><footer></footer></div>

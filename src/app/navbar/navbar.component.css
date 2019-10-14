@@ -18,12 +18,10 @@
 
 .submenu{
   position: absolute;
-    top: 40%;
+    top: 10%;
     height: 40%;
-    left:10%;
+    left:20%;
 }
-
-
 
 footer{
   background-color:#48120C;

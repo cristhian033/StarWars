@@ -19,4 +19,19 @@ export class SwapiService {
     return this.http.get('https://swapi.co/api/films/'+id).pipe(
       map(this.extractData));
   }
+
+  getPeople(id): Observable<any> {
+    return this.http.get('https://swapi.co/api/people/'+id).pipe(
+      map(this.extractData));
+  }
+
+  getSpecies(id): Observable<any> {
+    return this.http.get('https://swapi.co/api/species/'+id).pipe(
+      map(this.extractData));
+  }
+
+  getPlanets(id): Observable<any> {
+    return this.http.get('https://swapi.co/api/planets/'+id).pipe(
+      map(this.extractData));
+  }
 }

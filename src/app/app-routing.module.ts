@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { IndexComponent } from './index/index.component';
 
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'movies', pathMatch:'full'
+    path: '',
+    component: IndexComponent,
+    data: {title: 'Star Wars'}
   },
   {
     path: 'movies',

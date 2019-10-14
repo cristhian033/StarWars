@@ -18,13 +18,19 @@ import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCardModule,} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { PeopleComponent } from './people/people.component';
+import { PeopleDetailComponent } from './people-detail/people-detail.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoviesComponent,
     MovieDetailComponent,
-    NavbarComponent
+    NavbarComponent,
+    PeopleComponent,
+    PeopleDetailComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
