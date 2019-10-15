@@ -22,7 +22,7 @@ export class PeopleDetailComponent implements OnInit {
   }
 
   getCharacter(id){
-  this.swapi.getPeople(id).subscribe((data: {}) => {
+  this.swapi.getPeople(id).subscribe((data:any ) => {
     this.getPlanets(data.homeworld.split('/')[5])
 
     data.species.forEach( specie=> {
