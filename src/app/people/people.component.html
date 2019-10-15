@@ -1,1 +1,30 @@
-<p>people works!</p>
+<div>
+    <div fxFlex fxLayout="column">
+        <div fxLayout="row wrap"  fxLayoutAlign="center center" stretch>
+            <div fxFlex="20" fxLayout="column" *ngFor="let people of people.results" style="padding: 5px;">
+                <a href="/people/{{people.url.split('/')[5]}}?">
+                    <mat-card>
+                        <img mat-card-image src="../../assets/images/People/{{people.url.split('/')[5]}}.png" title='{{people.name}}'>
+                        <mat-card-title>{{people.name}}</mat-card-title>
+                    </mat-card>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div fxFlex fxLayout="column" class="space" >
+        <div fxLayout="row wrap" fx-flex fx-layout-align="end">
+            <div fxFlex="50" fxLayout="column" style="padding: 5px;" >
+                <a href="/people/page/{{people.previous.split('=')[1]}}" *ngIf="people.previous">
+                    <img width="64px" src="../../assets/images/back.png" title='BACK' class="imgRight">
+                </a>
+            </div>
+            <div fxFlex="50" fxLayout="column" style="padding: 5px;" >
+                <a href="/people/page/{{people.next.split('=')[1]}}" *ngIf="people.next">
+                    <img width="64px" src="../../assets/images/next.png" title='NEXT' class='imgLeft' >
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -34,4 +34,14 @@ export class SwapiService {
     return this.http.get('https://swapi.co/api/planets/'+id).pipe(
       map(this.extractData));
   }
+
+  getStarships(id): Observable<any> {
+    return this.http.get('https://swapi.co/api/starships/'+id).pipe(
+      map(this.extractData));
+  }
+
+  getVehicles(id): Observable<any> {
+    return this.http.get('https://swapi.co/api/vehicles/'+id).pipe(
+      map(this.extractData));
+  }
 }

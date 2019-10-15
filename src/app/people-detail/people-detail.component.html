@@ -1,1 +1,26 @@
-<p>people-detail works!</p>
+<div fxFlex fxLayout="column" *ngIf="people">
+    <div fxLayout="row wrap"  fxLayoutAlign="center center" stretch >
+        <div fxFlex="40" fxLayout="column" style="padding: 5px;">
+                <img class="img" mat-card-image src="../../assets/images/People/{{people.url.split('/')[5]}}.png" height="auto" title='{{people.name}}'>
+        </div>
+        <div fxFlex="60" fxLayout="column" style="padding: 5px;">
+            <h1 class="name" align="center">{{people.name}}</h1>
+            <table>
+                <tr><td class="title" width="40%;">HEIGHT:</td><td class="content" width="60%;">{{people.height}}</td></tr>
+                <tr><td class="title">MASS:</td><td class="content">{{people.mass}}</td></tr>
+                <tr><td class="title">HAIR COLOR:</td><td class="content">{{people.hair_color}}</td></tr>
+                <tr><td class="title">SKIN COLOR:</td><td class="content">{{people.skin_color}}</td></tr>
+                <tr><td class="title">EYE COLOR:</td><td class="content">{{people.eye_color}}</td></tr>
+                <tr><td class="title">BIRTH YEAR:</td><td class="content">{{people.birth_year}}</td></tr>
+                <tr><td class="title">GENDER:</td><td class="content">{{people.gender}}</td></tr>
+                <tr><td class="title">HOMEWORLD:</td><td class="content">{{planets.name}}</td></tr>
+                <tr *ngIf="species[0]"><td class="title">SPECIES:</td><td class="content"> <p *ngFor="let specie of species">{{specie.name}}</p></td></tr>
+                <tr *ngIf="vehicles[0]"><td class="title">VEHICLES:</td><td class="content"> <p *ngFor="let vehicle of vehicles">{{vehicle.name}}</p></td></tr>
+                <tr *ngIf="starships[0]"><td class="title">STARSHIPS:</td><td class="content"><p *ngFor="let starship of starships">{{starship.name}}</p></td></tr>
+                <tr *ngIf="films[0]"><td class="title">FILMS:</td><td class="content"><p *ngFor="let movie of films">{{movie.title}}</p></td></tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
