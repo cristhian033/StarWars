@@ -1,0 +1,22 @@
+<div fxFlex fxLayout="column" *ngIf="planet">
+    <div fxLayout="row wrap"  fxLayoutAlign="center center" stretch >
+        <div fxFlex="40" fxLayout="column" style="padding: 5px;">
+                <img class="img" mat-card-image src="../../assets/images/Planets/{{planet.url.split('/')[5]}}.png" height="auto" title='{{planet.name}}'>
+        </div>
+        <div fxFlex="60" fxLayout="column" style="padding: 5px;">
+            <h1 class="name">{{planet.name}}</h1>
+            <table>
+                <tr><td class="title" width="50%;">ROTATION PERIOD:</td><td class="content" width="50%;">{{planet.rotation_period}}</td></tr>
+                <tr><td class="title">ORBITAL PERIOD:</td><td class="content">{{planet.orbital_period}}</td></tr>
+                <tr><td class="title">DIAMETER:</td><td class="content">{{planet.diameter}}</td></tr>
+                <tr><td class="title">CLIMATE:</td><td class="content">{{planet.climate}}</td></tr>
+                <tr><td class="title">GRAVITY:</td><td class="content">{{planet.gravity}}</td></tr>
+                <tr><td class="title">TERRAIN:</td><td class="content">{{planet.terrain}}</td></tr>
+                <tr><td class="title">SURFACE WATER:</td><td class="content">{{planet.surface_water}}</td></tr>
+                <tr><td class="title">POPULATION:</td><td class="content">{{planet.population}}</td></tr>
+                <tr *ngIf="people[0]"><td class="title">RESIDENTS:</td><td class="content"> <p *ngFor="let person of people">{{person.name}}</p></td></tr>
+                <tr *ngIf="films[0]"><td class="title">FILMS:</td><td class="content"><p *ngFor="let movie of films">{{movie.title}}</p></td></tr>
+            </table>
+        </div>
+    </div>
+</div>

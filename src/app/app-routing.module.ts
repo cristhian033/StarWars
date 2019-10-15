@@ -5,7 +5,8 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { IndexComponent } from './index/index.component';
 import { PeopleComponent } from './people/people.component';
 import { PeopleDetailComponent } from './people-detail/people-detail.component';
-
+import { PlanetsComponent } from './planets/planets.component';
+import { PlanetsDetailComponent } from './planets-detail/planets-detail.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,26 @@ const routes: Routes = [
     path: 'people/:id',
     component: PeopleDetailComponent,
     data: { title: 'Characters Details' }
+  },
+  {
+    path: 'planets',
+    component: PlanetsComponent,
+    data: {title: 'Star Wars Planets'}
+  },
+  {
+    path: 'planets/',
+    component: PlanetsComponent,
+    data: {title: 'Star Wars Planets'}
+  },
+  {
+    path: 'planets/page/:id',
+    component: PlanetsComponent,
+    data: {title: 'Star Wars Planets'}
+  },
+  {
+    path: 'planets/:id',
+    component: PlanetsDetailComponent,
+    data: { title: 'Planets Details' }
   },
 ];
 

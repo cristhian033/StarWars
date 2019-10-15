@@ -21,6 +21,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { PeopleComponent } from './people/people.component';
 import { PeopleDetailComponent } from './people-detail/people-detail.component';
 import { IndexComponent } from './index/index.component';
+import { PlanetsComponent } from './planets/planets.component';
+import { PlanetsDetailComponent } from './planets-detail/planets-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { IndexComponent } from './index/index.component';
     NavbarComponent,
     PeopleComponent,
     PeopleDetailComponent,
-    IndexComponent
+    IndexComponent,
+    PlanetsComponent,
+    PlanetsDetailComponent
   ],
   imports: [
     BrowserModule,

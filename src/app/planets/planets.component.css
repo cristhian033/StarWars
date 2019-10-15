@@ -1,0 +1,21 @@
+mat-card{
+    text-align: center;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.space{
+    padding-bottom: 50px;
+}
+
+.imgLeft{
+    padding-left: 90% !important;
+    max-width: 10%;
+}
+
+.imgRight{
+    padding-right: 90% !important;
+    max-width: 10%;
+}
