@@ -1,0 +1,30 @@
+<div>
+    <div fxFlex fxLayout="column">
+        <div fxLayout="row wrap"  fxLayoutAlign="center center" stretch>
+            <div fxFlex="20" fxLayout="column" *ngFor="let specie of species.results" style="padding: 5px;">
+                <a href="/species/{{specie.url.split('/')[5]}}?">
+                    <mat-card>
+                        <img mat-card-image src="../../assets/images/Species/{{specie.url.split('/')[5]}}.png" title='{{specie.name}}'>
+                        <mat-card-title>{{specie.name}}</mat-card-title>
+                    </mat-card>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div fxFlex fxLayout="column" class="space" >
+        <div fxLayout="row wrap" fx-flex fx-layout-align="end">
+            <div fxFlex="50" fxLayout="column" style="padding: 5px;" >
+                <a href="/species/page/{{species.previous.split('=')[1]}}" *ngIf="species.previous">
+                    <img width="64px" src="../../assets/images/back.png" title='BACK' class="imgRight">
+                </a>
+            </div>
+            <div fxFlex="50" fxLayout="column" style="padding: 5px;" >
+                <a href="/species/page/{{species.next.split('=')[1]}}" *ngIf="species.next">
+                    <img width="64px" src="../../assets/images/next.png" title='NEXT' class='imgLeft' >
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

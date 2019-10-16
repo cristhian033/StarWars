@@ -1,0 +1,23 @@
+<div fxFlex fxLayout="column" *ngIf="specie">
+    <div fxLayout="row wrap"  fxLayoutAlign="center center" stretch >
+        <div fxFlex="40" fxLayout="column" style="padding: 5px;">
+                <img class="img" mat-card-image src="../../assets/images/Species/{{specie.url.split('/')[5]}}.png" height="auto" title='{{specie.name}}'>
+        </div>
+        <div fxFlex="60" fxLayout="column" style="padding: 5px;">
+            <h1 class="name">{{specie.name}}</h1>
+            <table>
+                <tr><td class="title" width="50%;">AVERAGE HEIGHT:</td><td class="content" width="50%;">{{specie.average_height}}</td></tr>
+                <tr><td class="title">AVERAGE LIFESPAN:</td><td class="content">{{specie.average_lifespan}}</td></tr>
+                <tr><td class="title">CLASSIFICATION:</td><td class="content">{{specie.classification}}</td></tr>
+                <tr><td class="title">DESIGNATION:</td><td class="content">{{specie.designation}}</td></tr>
+                <tr><td class="title">EYE COLORS:</td><td class="content">{{specie.eye_colors}}</td></tr>
+                <tr><td class="title">HAIR COLORS:</td><td class="content">{{specie.hair_colors}}</td></tr>
+                <tr><td class="title">SKIN COLORS:</td><td class="content">{{specie.skin_colors}}</td></tr>
+                <tr><td class="title">HOMEWORLD:</td><td class="content">{{planet.name}}</td></tr>
+                <tr><td class="title">LANGUAGE:</td><td class="content">{{specie.language}}</td></tr>
+                <tr *ngIf="people[0]"><td class="title">PEOPLE:</td><td class="content"> <p *ngFor="let person of people">{{person.name}}</p></td></tr>
+                <tr *ngIf="films[0]"><td class="title">FILMS:</td><td class="content"><p *ngFor="let movie of films">{{movie.title}}</p></td></tr>
+            </table>
+        </div>
+    </div>
+</div>

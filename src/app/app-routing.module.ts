@@ -7,6 +7,8 @@ import { PeopleComponent } from './people/people.component';
 import { PeopleDetailComponent } from './people-detail/people-detail.component';
 import { PlanetsComponent } from './planets/planets.component';
 import { PlanetsDetailComponent } from './planets-detail/planets-detail.component';
+import { SpeciesComponent } from './species/species.component';
+import { SpeciesDetailComponent } from './species-detail/species-detail.component';
 
 const routes: Routes = [
   {
@@ -68,6 +70,26 @@ const routes: Routes = [
     path: 'planets/:id',
     component: PlanetsDetailComponent,
     data: { title: 'Planets Details' }
+  },
+  {
+    path: 'species',
+    component: SpeciesComponent,
+    data: {title: 'Star Wars Species'}
+  },
+  {
+    path: 'species/',
+    component: SpeciesComponent,
+    data: {title: 'Star Wars Species'}
+  },
+  {
+    path: 'species/page/:id',
+    component: SpeciesComponent,
+    data: {title: 'Star Wars Species'}
+  },
+  {
+    path: 'species/:id',
+    component: SpeciesDetailComponent,
+    data: { title: 'Species Details' }
   },
 ];
 

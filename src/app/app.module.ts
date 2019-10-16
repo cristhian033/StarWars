@@ -23,6 +23,8 @@ import { PeopleDetailComponent } from './people-detail/people-detail.component';
 import { IndexComponent } from './index/index.component';
 import { PlanetsComponent } from './planets/planets.component';
 import { PlanetsDetailComponent } from './planets-detail/planets-detail.component';
+import { SpeciesComponent } from './species/species.component';
+import { SpeciesDetailComponent } from './species-detail/species-detail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { PlanetsDetailComponent } from './planets-detail/planets-detail.componen
     PeopleDetailComponent,
     IndexComponent,
     PlanetsComponent,
-    PlanetsDetailComponent
+    PlanetsDetailComponent,
+    SpeciesComponent,
+    SpeciesDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,7 @@ export class SwapiService {
   }
 
   getMovies(id): Observable<any> {
-    return this.http.get('https://swapi.co/api/films/'+id).pipe(
+    return this.http.get('https://swapi.co/api/films/'+id+'?a=5').pipe(
       map(this.extractData));
   }
 
